@@ -54,7 +54,7 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){   
                        sh "docker build -t amazon-nodejs ."
-                       sh "docker tag amazon-clone deepajagadish/amazon-nodejs:latest "
+                       sh "docker tag amazon-nodejs deepajagadish/amazon-nodejs:latest "
                        sh "docker push deepajagadish/amazon-nodejs:latest "
                     }
                 }
